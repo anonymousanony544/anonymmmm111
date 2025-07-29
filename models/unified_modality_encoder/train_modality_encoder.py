@@ -44,7 +44,7 @@ def save_encoder_and_embeddings(city, encoder, all_embeddings, save_dir, save_em
     for i, modality in enumerate(modalities):
         emb = full_embedding[:, :, :, i, :, :]
         torch.save(emb, os.path.join(save_embed_dir, f"{modality}_embedding_{city}.pt"))
-        print(f"✅ Saved {modality} embedding in city {city}: shape {emb.shape}")
+        print(f" Saved {modality} embedding in city {city}: shape {emb.shape}")
 
 def train(city, train_embeddings, raw_inputs, raw_targets, full_embeddings, device, epochs=100, lr=1e-4, alpha=0.2):
     encoder = UnifiedMultiEncoder(
@@ -153,8 +153,6 @@ def main():
         temp_emb = temp_emb[:30]
         hum_emb = hum_emb[:30]
 
-        print(f"🌡️ Temp in {city} max: {temp.max().item():.4f}, min: {temp.min().item():.4f}")
-        print(f"💧 Humid in {city} max: {hum.max().item():.4f}, min: {hum.min().item():.4f}")
 
         speed, demand, inflow = process_small(speed, demand, inflow)
 
