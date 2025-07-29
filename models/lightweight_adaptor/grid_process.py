@@ -8,7 +8,7 @@ import torch.nn.functional as F
 import numpy as np
 import random
 from models_pre_encode import SimpleVAE
-from util import *
+from models.util import *
 import math
 
 os.makedirs('./models', exist_ok=True)

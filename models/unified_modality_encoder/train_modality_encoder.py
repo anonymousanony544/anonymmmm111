@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader, Dataset
 import torch.nn.functional as F
 import numpy as np
 import random
-from util import *
+from models.util import *
 import math
 from modality_model import *
 from transformers import AutoTokenizer, AutoModelForCausalLM

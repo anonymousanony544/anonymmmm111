@@ -11,7 +11,7 @@ import math
 from torch.utils.data import Dataset, DataLoader
 from torch_geometric.utils import dense_to_sparse
 from models_pre_encode import MultiModalGCNVAE
-from util import loaddata_city, process_d_city
+from models.util import loaddata_city, process_d_city
 
 os.makedirs('./models', exist_ok=True)
 os.makedirs('./embeddings', exist_ok=True)
